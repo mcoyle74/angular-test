@@ -7,6 +7,13 @@
 <body>
 	<h1>{{ "Hello world!" | uppercase }}</h1>
 	<p>{{ 123456789.12345|number:2 }}</p>
+	<ul>
+		<li ng-if="1 < 2">One is Less Than Two</li>
+		<li ng-if="1 <= 2">One is Less Than or Equal to Two</li>
+		<li ng-if="1 == 2">One is Equal to Two</li>
+		<li ng-if="1 >= 2">One is Greater Than or Equal to Two</li>
+		<li ng-if="1 > 2">One is Greater Than Two</li>
+	</ul>
 	<script type="text/javascript" src="/js/angular.min.js"></script>
 	<script type="text/javascript" src="/js/templateTest.js"></script>
 </body>
