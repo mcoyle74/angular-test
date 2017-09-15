@@ -3,13 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Angular Template Test</title>
+	<style type="text/css">
+		li:first-child {
+			font-style: italic;
+		}
+		li:last-child {
+			font-weight: bold;
+		}
+	</style>
 </head>
 <body>
 	<h1>{{ "Hello world!" | uppercase }}</h1>
 	<p>{{ 123456789.12345|number:2 }}</p>
 	<ul>
 		<li ng-if="1 < 2">One is Less Than Two</li>
-		<li ng-if="1 <= 2">One is Less Than or Equal to Two</li>
+		<li ng-if="1 <= 2" ng-hide="true">One is Less Than or Equal to Two</li>
 		<li ng-if="1 == 2">One is Equal to Two</li>
 		<li ng-if="1 >= 2">One is Greater Than or Equal to Two</li>
 		<li ng-if="1 > 2">One is Greater Than Two</li>
@@ -18,10 +26,10 @@
 		<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter }}</li>
 	</ol>
 	<ul>
-		<li ng-repeat="num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" ng-if="num % 2 == 0">{{ num }} is even!</li>
+		<li ng-repeat="num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" ng-if="num % 2 == 0" ng-show="true">{{ num }} is even!</li>
 	</ul>
 	<ul>
-		<li ng-repeat="n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-if="n % 3 != 0">{{ n }}</li>
+		<li ng-repeat="n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-hide="true" ng-if="n % 3 != 0">{{ n }}</li>
 	</ul>
 	<script type="text/javascript" src="/js/angular.min.js"></script>
 	<script type="text/javascript" src="/js/templateTest.js"></script>
